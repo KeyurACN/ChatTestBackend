@@ -18,6 +18,10 @@ const userRoute = require('./Routes/userRoutes');
 const messageRoute = require('./Routes/messageRoutes')
 
 
+app.get("/",(req,res) =>{
+    res.send("wlecome home")
+})
+
 // Middlewares
 app.use("/api/v1", authRoute);
 app.use("/api/v1", chatRoute);
