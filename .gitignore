@@ -1,0 +1,34 @@
+ # Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
+
+# Dependency directories
+jspm_packages/
+
+# Miscellaneous
+*.tgz
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+# Package lock
+package-lock.json
