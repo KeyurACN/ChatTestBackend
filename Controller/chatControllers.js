@@ -65,7 +65,8 @@ exports.fetchChats = catchAsyncError(async (req, res, next) => {
             select: "name email",
         });
 
-        res.status(200).send(populatedResults);
+        // res.status(200).send(populatedResults);
+        res.status(200).json(populatedResults);
     } catch (error) {
         return next(new ErrorHandler("Error occurred", 500));
     }

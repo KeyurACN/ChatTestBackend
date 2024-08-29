@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.post("/createchat", protect, accessChat); // create or access new chat.
 
-router.get("/chats", protect, fetchChats); // fetching all the chats for a user.
+router.get("/Allchats", protect, fetchChats); // fetching all the chats for a user.
 
 router.get("/message/:chatId",protect,fetchMessages)
 
