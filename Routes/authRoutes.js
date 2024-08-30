@@ -9,6 +9,6 @@ router.post("/user/register", RegisterUserinfo);
 router.post("/user/login", LoginUser);
 
 
-router.get("/user/Alluser", protect, GetAllUser)
+router.get("/user/Alluser", GetAllUser)
 
 module.exports = router;

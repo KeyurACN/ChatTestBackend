@@ -1,26 +1,27 @@
-const express = require('express');
-const cors = require('cors');
-const dotenv = require('dotenv');
-const ErrorHandler = require('./Middleware/error');
+const express = require("express");
+const cors = require("cors");
+const dotenv = require("dotenv");
+const ErrorHandler = require("./Middleware/error");
 
 const app = express();
 
 app.use(express.json());
 
 dotenv.config({
-    path: "./config/.env"
+  path: "./config/.env",
 });
 
+app.use(cors({ origin: "*" }));
+
 // Importing Routes
-const authRoute = require('./Routes/authRoutes');
-const chatRoute = require('./Routes/chatRoutes');
-const userRoute = require('./Routes/userRoutes');
-const messageRoute = require('./Routes/messageRoutes')
+const authRoute = require("./Routes/authRoutes");
+const chatRoute = require("./Routes/chatRoutes");
+const userRoute = require("./Routes/userRoutes");
+const messageRoute = require("./Routes/messageRoutes");
 
-
-app.get("/",(req,res) =>{
-    res.send("wlecome home")
-})
+app.get("/", (req, res) => {
+  res.send("wlecome home");
+});
 
 // Middlewares
 app.use("/api/v1", authRoute);
